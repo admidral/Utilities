@@ -6,8 +6,6 @@ package Utilities;
 import java.util.*;
 import javax.swing.*;
 
-import com.lambdaworks.crypto.SCryptUtil;
-
 import java.security.MessageDigest;
 import java.text.*;
 import Reference.*;
@@ -33,18 +31,4 @@ public class Security {
 		       throw new RuntimeException(ex);
 		    }
 		}
-		
-		
-			public static  String scrypt(String input){// This is a more secure system than SHA-512 but requires an additional External Libarary ( Appcache 2.0 Lisence)
-			
-				String output = SCryptUtil.scrypt(input, 64, 64, 64);// Generates Scrypt algorithm
-				return output;
-				}
-			
-					
-				
-			}
-	
-
-
-
+}
