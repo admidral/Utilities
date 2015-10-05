@@ -17,11 +17,11 @@ public final class input {
 	 * input
 	 * 
 	 * Format input types input.words--- Input String input.integer--- input Int
-	 * input.posetiveinteger--- input Posetive Int (Excludes 0)
+	 * input.positiveinteger--- input positive Int (Excludes 0)
 	 * input.negativeinteger--- input Negative Int (Excludes 0) input.decimal---
-	 * input double input.posetivedecimal--- input Posetive double (Excludes 0)
+	 * input double input.positivedecimal--- input positive double (Excludes 0)
 	 * input.negativedecimal--- input Negative double (Excludes 0) say:
-	 * input.digit---input posetive one digit
+	 * input.digit---input positive one digit
 	 */
 
 	public static int integer() {
@@ -51,20 +51,20 @@ public final class input {
 		return a;
 	}
 
-	public static int posetiveinteger() {
+	public static int positiveinteger() {
 		int a = -1;
 		Scanner userchoice = new Scanner(System.in);// importing the scanner
-		System.out.println("Please enter a posetive Integer");
+		System.out.println("Please enter a positive Integer");
 
 		while (a < 0) {
 
 			while (!userchoice.hasNextInt()) {
 				userchoice.next(); // this is important!
-				System.out.println("Please retry entering a posetive Integer");
+				System.out.println("Please retry entering a positive Integer");
 			}// checks whether it is a int and will retry until is int
 			a = userchoice.nextInt();
 			if (a < 0) {
-				System.out.println("Please make sure the number is posetive");
+				System.out.println("Please make sure the number is positive");
 			}
 		}
 		return a;
@@ -80,11 +80,11 @@ public final class input {
 		
 			while (!userchoice.hasNextInt()) {
 				userchoice.next(); // this is important!
-				System.out.println("Please retry entering a posetive Integer");
+				System.out.println("Please retry entering a positive Integer");
 			}// checks whether it is a int and will retry until is int
 			a = userchoice.nextInt();
 			if (a < 0) {
-				System.out.println("Please make sure the number is posetive");
+				System.out.println("Please make sure the number is positive");
 			}
 			if (a > 10){
 				System.out.println("Please make sure it is a digit");
@@ -115,21 +115,21 @@ public final class input {
 
 	}
 
-	public static double posetivedecimal() {
+	public static double positivedecimal() {
 		double a = -1;
 		Scanner userchoice = new Scanner(System.in);// importing the scanner
-		System.out.println("Please enter a posetive number");
+		System.out.println("Please enter a positive number");
 
 		while (a < 0) {
 
 			while (!userchoice.hasNextDouble()) {
 				userchoice.next(); // this is important!
-				System.out.println("Please retry entering the posetive number");
+				System.out.println("Please retry entering the positive number");
 			}// checks whether it is a int and will retry until is int
 
 			a = userchoice.nextDouble();
 			if (a < 0) {
-				System.out.println("Please make sure the number is posetive");
+				System.out.println("Please make sure the number is positive");
 			}
 		}
 		return a;

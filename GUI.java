@@ -19,8 +19,8 @@ public class GUI {
 //	inputstring requires one input being the message to give to the user for the input
 //	inputinteger and inputdecimal converts the string into integer and double respectively
 //
-	public static void popup(String a, String b) {
-		JOptionPane.showMessageDialog(null, a, b, JOptionPane.PLAIN_MESSAGE);
+	public static void popup(Object a, Object b) {
+		JOptionPane.showMessageDialog(null,(String) a, (String) b, JOptionPane.PLAIN_MESSAGE);
 	}
 
 	public static String inputstring(String b) {
